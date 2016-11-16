@@ -35,20 +35,17 @@ return [
     |
     */
 
-    'connections' => [
-
-        'main' => [
-            'salt' => 'hpkBzp0NKB9bbALcaLbP',
-            'length' => 'mCP7rqTPz8UPjckVO0kl',
-            'alphabet' => 'qCspez1IuzBs8bZ7uwmK',
-        ],
-
-        'alternative' => [
-            'salt' => 'e36uz30AiGU3r5ImyPQC',
-            'length' => 'tLLjUqoUCPIx5zsAZ59H',
-            'alphabet' => 'cgev3F0uzLhgUGPJKqPS',
-        ],
-
-    ],
+      'connections' => [
+          'main' => [
+              'salt' => env('HASHIDS_SALT'),
+              'length' => env('HASHIDS_LENGTH'),
+              'alphabet' => env('HASHIDS_ALPHABET'),
+          ],
+          'alternative' => [
+              'salt' => 'your-salt-string',
+              'length' => 'your-length-integer',
+              'alphabet' => 'your-alphabet-string',
+          ],
+      ],
 
 ];

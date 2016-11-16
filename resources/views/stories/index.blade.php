@@ -8,6 +8,7 @@
     </div>
     <div class="col-sm-9">
       <h2>All stories</h2>
+      <h3>{{ $hashed }}</h3>
       @if (count($stories) >= 1)
         @foreach ($stories as $key => $story)
           {{ $story->name }}
